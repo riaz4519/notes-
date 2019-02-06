@@ -1,0 +1,23 @@
+
+
+Title : Laravel and Vuejs
+
+Link : https://www.youtube.com/watch?v=ukZZyyfHCGc&list=PLB4AdipoHpxZcaRs8RWpoywYf_JotqZnz&index=2
+
+
+Lesson - 01 - intro:
+
+	
+
+Lesson - 02 - Components 
+
+
+	** for using vue on laravel two thing is needed/
+
+		-npm install 
+
+			-for installing all the dependencies that we need to run the system.
+
+		-npm run watch
+
+			-to show that the system has runned properly

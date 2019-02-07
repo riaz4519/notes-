@@ -7,6 +7,12 @@ Link : https://www.youtube.com/watch?v=ukZZyyfHCGc&list=PLB4AdipoHpxZcaRs8RWpoyw
 
 Lesson - 01 - intro:
 
+		this tutorial seris is for understanding the basic of laravel and vue js implementation
+
+		*composer global require laravel/installer
+
+			laravel new lara-vue
+
 	
 
 Lesson - 02 - Components 
@@ -21,3 +27,119 @@ Lesson - 02 - Components
 		-npm run watch
 
 			-to show that the system has runned properly
+
+
+
+	** all the global componenets but be declear in app.js file
+
+		Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+	** when declearing in global always remembe to add defaul at the end
+
+
+
+Lesson - 3 insert data in the database
+
+	-first create the database credentials
+
+	-must not forget to add the "pretected field"
+
+	- create controller with resoure that have been done in this tutorial
+
+	** route for the axios request must be reclear in the ./routes/api.php file
+
+		Route::resource('task','TaskController');
+
+	**for inserting data we can use the "POST" request 
+
+
+		axios is already install in our laravel app .
+
+		now  for the request
+
+		axios.post('./api/task',{
+
+			//the object
+
+			title:'hello world',
+		})
+
+
+		this will send the data to the controller and then we just do our regular thing
+
+			Task:create($request->all());
+
+
+			then return an response .
+
+
+			return (['message' => 'This is the task'])
+
+
+			laravel makes it automatically to a json response 
+
+			     axios.post('./api/task',{
+
+                    title: this.title,
+
+
+                }).then( (response) => {
+
+
+                    this.title = '';
+
+                    Event.$emit('taskCreated');
+
+                    console.log(response.data.message);
+
+                })
+
+
+ Lesson - 4 - getting the list from the database
+
+
+ 	axios.get('./api/task').then( response =>{
+
+ 			this.lists = response.data;
+
+ 	})
+
+
+Lesson - 5 - component communication
+
+
+	we do this by custom events 
+
+		-first declear
+
+			window.Event = new Vue();
+
+			its call event bus system
+
+	we use this to communicate between components .Like when we change something we send a call that this data is being changed 
+
+
+
+		Event.$emit('changed');
+
+
+
+		from the other component
+
+		Event.$on('changed',() =>{
+
+			what ever you do
+		})
+
+	
+
+
+
+
+
+
+
+
+
+
+

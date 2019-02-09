@@ -2,4 +2,71 @@
 
 Admin Lte tutoril
 
+
+	-github : https://github.com/Hujjat/laravStart
+
+	
+
+Lesson - 1 - intro
+
+
+
+
+Lesson - 2 - Configure
+
+	**install 
+
+		-laravel new larastart
+
+
+	AdminLte 3 
+
+		install Admin Lte 3 
+
+		Starter page: http://demo.cssmoban.com/cssthemes5/cpts_992_bmf.0-alpha/starter.html
+
+			-npm install
+
+			-npm install admin-lte@v3.0.0-alpha.2 --save
+
+			-admin lte 3 -> extra -> starter page
+
+
+	-php artisan make:auth 
+
+	-make a master blade 
+	-copy the admin lte 3 template code 
+	- src='/js/app.js'
+
+	- 'css/app.css'
+
+	- go to resource file -> js ->bootstrap.js require('admin-lte');
+
+	- go to resource and -> css - > app.scss  @import "~admin-lte/dist/css/adminlte.css";
+
+
+	-npm run watch - compile run and return if any is there
+
+Lesson - Configure Fontawesome 5
+
+	- flat icon 
+	- download rocket and profile with microphone 
+
+	**
+	- fontawesome
+
+		font awesome page - we will use the npm version 
+
+			install - > npm install --save-dev @fortawesome/fontawesome-free
+
+
+			-in the resource  app.scss
+
+				$fa-font-path:"../webfonts";
+
+				@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+				@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+				@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+	
 	

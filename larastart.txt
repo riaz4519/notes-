@@ -68,5 +68,71 @@ Lesson - Configure Fontawesome 5
 				@import "~@fortawesome/fontawesome-free/scss/solid.scss";
 				@import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
+
+
+Lesson - 4 - Github configaration
+
+
+
+
+
+Lesson - 5 - just little bit master blade configaration 
+
+	-chaning the icon 
+	-adding new tab
+
+Lesson - 6 - vue router adding to laravel 
+
+	Here we have configure vue-routes .
+
+		-first is installing the routes
+
+			npm install vue-router --save
+
+		-configureing the vue router 
+
+			-for that we have to first 	import vue router in resource -> js app.js
+
+				import VueRouter from 'vue-router'
+
+				Vue.use(VueRouter);
+
+			-then
+
+			let  routes = [
+
+			    { path:'/profile',component:Profile },
+			    { path:'/dashboard',component:DashBoard }
+
+			];
+
+			-then
+
+			const router = new VueRouter({
+
+				mode:'history',
+				routes : routes,
+
+			});
+
+
+			-Configuring the front-end
+
+
+				<router-view> </router-view> At the master tamplate 
+
+				<router-link to='/'></router-link> on the link
+
+
+		**problems there will be two of them
+
+			one - addisng csrf token on the master
+
+			two - adding the "app-id" one the wrapper - not on the body 
+
+
+
+
+
 	
 	

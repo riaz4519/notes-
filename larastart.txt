@@ -131,6 +131,11 @@ Lesson - 6 - vue router adding to laravel
 			two - adding the "app-id" one the wrapper - not on the body 
 
 
+		** vue router will not work on url or page reload for doing that we have to add a router on web.php file
+
+			Route::get('{path}',"HomeController@index")->where( 'path', '([A-z\d-\/_.]+)?' );
+
+
 
 
 

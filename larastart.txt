@@ -136,6 +136,34 @@ Lesson - 6 - vue router adding to laravel
 			Route::get('{path}',"HomeController@index")->where( 'path', '([A-z\d-\/_.]+)?' );
 
 
+Lesson - 7 - Active menu in vue router
+
+
+	**history node 
+
+	const router = new VueRouter({
+
+
+		mode:'history',
+		routes:routes
+
+	})
+
+
+	at the last line of the route add 
+
+				Route::get('{path}',"HomeController@index")->where( 'path', '([A-z\d-\/_.]+)?' );
+
+
+	** for any global styling use app.scss in the resource sass->app.scss
+
+
+	** <router-link> active class	
+
+		router-link-exact-active
+
+			-when we click on a link the above link apear . so that means it active now . and we can add style to that link and make sure which link is active
+
 
 
 

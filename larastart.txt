@@ -191,6 +191,22 @@ Lesson - 8 - Custom Color for Font Awesome Icons and How Logout Works in Laravel
 				}
 
 
+Lesson - 9 - Customizing User Table with Profile Photo and User 
+
+
+	-just changed the user table format and the refreshed it
+	-added user type table and the default is user 
+
+	-added bio and photo to
+
+Lesson - 10 - Create User Managment Component
+
+	nothing much just created the User component
+
+
+Lesson - 11 - Display Users in Table and Modal Window for Creating new User
+
+
 
 
 

@@ -206,6 +206,10 @@ Lesson - 10 - Create User Managment Component
 
 Lesson - 11 - Display Users in Table and Modal Window for Creating new User
 
+	-just configuring the user showing table 
+	-adding modal window to the Users component
+	-using variable.sass  for adding font-awesome color
+
 
 
 

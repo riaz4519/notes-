@@ -211,6 +211,13 @@ Lesson - 11 - Display Users in Table and Modal Window for Creating new User
 	-using variable.sass  for adding font-awesome color
 
 
+Lesson 12 - Using VFrom for Back-end Error Handling in Laravel and Vuejs
+
+	*Introduction- for validate form to handle laravel back-end validation with vue
+
+
+
+
 
 
 

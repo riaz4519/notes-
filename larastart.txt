@@ -326,6 +326,71 @@ Lesson 12 - Using VFrom for Back-end Error Handling in Laravel and Vuejs
 
 Lesson - 13 - API Resource Controller
 
+	-submit by vue 
+
+		@submit.prevent="createUser"
+
+	-function will be called
+
+		createUser:function(){
+
+
+
+				this.form.post('/api/user');
+
+
+		}
+
+	-create a api controller 
+
+		-php artisan make:controller API/UserController --api
+			-api user have index ,store,update and delete functionality
+
+		-to register the controller to the router
+
+			-single
+				-Route::apiResource('user','UserController');
+
+			-Multiple --apiResources
+
+				-Route::apiResources([
+
+					'user'=>'UserController',
+					'whatever' =>'WhatEverController'
+
+
+				])
+
+
+Lesson - 14 - Insert user Data to DataBase Using Axios in laravel 
+
+
+		this is for uploading the datas to the database
+
+	-on click create button createUser method will run
+
+			this.form.post('api/user')
+
+	-check with a response message 
+
+	 	return ['message'=>'hello wrl'];
+
+
+	 -create the user 
+
+	 retrun User:create([
+
+	 	'name' => $request['name'];
+
+	 ])
+
+
+
+
+
+
+
+
 
 
 

@@ -384,6 +384,12 @@ Lesson - 14 - Insert user Data to DataBase Using Axios in laravel
 
 	 ])
 
+Lesson - 15 - Nice Server Validation with Laravel and Vue js (handle with vForm)
+
+	- Just normal validation at the server site 
+
+	- it works good 
+
 
 
 

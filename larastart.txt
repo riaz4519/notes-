@@ -392,7 +392,37 @@ Lesson - 15 - Nice Server Validation with Laravel and Vue js (handle with vForm)
 
 
 
+Lesson - 16 - Display Users from Database in Table Using Axios in Laravel and Vue
 
+
+	- first creating a methods loadUser
+
+		methods:{
+
+		loadUser:function(){
+
+
+			axios.get("/api/users").then((response) => {
+
+				this.users.response.data.data;
+			})
+
+		}
+
+		}
+
+	-call it from created Method "life cycle"
+
+		created(){
+
+			loadUser();
+
+
+		}
+
+	-displaying to the user
+
+	<tr v-for="user in users" :key="user.id"></tr>
 
 
 

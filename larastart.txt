@@ -425,6 +425,55 @@ Lesson - 16 - Display Users from Database in Table Using Axios in Laravel and Vu
 	<tr v-for="user in users" :key="user.id"></tr>
 
 
+Lesson - 17 - Global Vuejs Filters and Momentjs Instead of Carbon in Laravel and Vue
+
+
+	we will learn about or remind about filters and then learn momentjs
+
+	*** problem faced about 500 error always look for the error message in the network tab and also header params and response 
+
+
+	**Filter
+		-use for change the outcome of the data as we know 
+		-declear a global filter laravel in the App.js file
+
+			- Vue.filter('upText',function(text){
+
+
+				return text.charAt(0).toUpperCase() + text.slice(1);
+
+			})
+
+
+	**Moment js 
+
+		-its a libray like carbon but it uses javascript insted of php
+
+		-install 
+			npm install moment --save
+
+			-import it globally in app.js
+
+				import moment from 'moment'
+
+		-using it with the filter
+
+			-Vue.filter('myDate',function (created) {
+
+			    return moment(created).format('MMMM DD YYYY')
+
+			})
+
+		**call from vue 
+
+			{{ data | filter name }}
+
+
+
+
+
+
+
 
 
 

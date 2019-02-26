@@ -470,6 +470,102 @@ Lesson - 17 - Global Vuejs Filters and Momentjs Instead of Carbon in Laravel and
 
 
 
+Lesson - 18 - ProgressBar with Vuejs and Laravel When Create new Record with Ajax.
+
+
+	vue-progressbar is progress plugin for vue
+
+	-install & setup
+		-install 
+			-npm install vue-progressbar --save
+
+		-setup
+
+			-  import it on the app.js if you want to make it global like
+
+				import VueProgressBar from 'vue-progressbar'
+
+				Vue.use(VueProgressBar, {
+				    color: 'rgb(143, 255, 199)',
+				    failedColor: 'red',
+				    height: '3px'
+				})
+
+	-using on vue template
+
+		-**place this tag under the master .Under the <router-view></router-view> 
+
+		<vue-progress-bar></vue-progress-bar>
+
+		- call it on the method when creating user as a example 
+
+
+              this.$Progress.start();
+
+             	 this.form.post('api/user');
+
+              this.$Progress.finish();
+
+
+Lesson - 19 - Sweet Alert in Laravel 5.7 and Vue after Ajax Request
+
+		De: in this video we will talk about sweetalert2 . its a package that is for makign alert in vue
+
+		and also we will hide the modal
+
+		-install sweetaler2 and setup
+
+			-install 
+
+				-npm install sweetalert2 --save
+
+			-setup
+
+				-import Swal from 'sweetalert2'
+
+				-declear it globally 
+					-window.swal = Swal
+
+					const Toast = Swal.mixin({
+				    toast: true,
+				    position: 'top-end',
+				    showConfirmButton: false,
+				    timer: 3000
+				});
+
+				-window.toast = Toast;
+	-use it on methods after finishing alert
+
+              toast.fire({
+                  type: 'success',
+                  title: 'User Created SuccessFully'
+              })
+
+    -hide  modal
+
+    	$("#addNew").modal('hide');
+
+
+Lesson - 20 - Send HTTP Request Every 3 Seconds to Update Data in Laravel and Vuejs
+
+		in this video we will do a simple thing . we will load our table every three minutes
+
+
+		created(){
+
+			setInterval(() => this.loadUsers,3000)
+
+		}
+
+
+
+
+
+
+
+
+
+
 
 
 

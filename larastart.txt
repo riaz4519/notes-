@@ -558,6 +558,9 @@ Lesson - 20 - Send HTTP Request Every 3 Seconds to Update Data in Laravel and Vu
 		}
 
 
+Lesson - 21 - Use Custom Event to Send HTTP Request After You Create the User in Laravel and Vuejs
+
+
 
 
 

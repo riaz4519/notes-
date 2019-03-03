@@ -561,6 +561,53 @@ Lesson - 20 - Send HTTP Request Every 3 Seconds to Update Data in Laravel and Vu
 Lesson - 21 - Use Custom Event to Send HTTP Request After You Create the User in Laravel and Vuejs
 
 
+	This video is about autometically updating the table of user after a new user is been created.
+
+	For this we will use the custom event
+
+		-Setup 
+			-create a global instance of vue which is called the event bus(net ninja)
+
+				window.Fire = new Vue();
+
+		-implementation
+
+			-when the user is been created we will fire function
+
+				Fire.$emit('afterCreate');
+
+			-then we will receive it
+
+				created(){
+
+					Fire.$on('afterCreate',() =>{
+
+						this.loadUser()
+						//this will load our user
+
+					})
+
+				}
+
+
+Lesson - 21 - Using Promise to Detect Successfull HTTP Request in Laravel and Vue
+
+	this video is about using promise . Promise is a feature that will run the next function after we fullfill the previous requirement.
+
+
+	-using then(() => { } )
+
+		-this.form.post('api/user').then(() => {
+
+			//if the post runned successfully it will run 
+
+		}).catch(() => {
+
+			//it will run if we have any error
+
+		});
+
+
 
 
 

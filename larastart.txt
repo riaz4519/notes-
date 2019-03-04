@@ -590,7 +590,7 @@ Lesson - 21 - Use Custom Event to Send HTTP Request After You Create the User in
 				}
 
 
-Lesson - 21 - Using Promise to Detect Successfull HTTP Request in Laravel and Vue
+Lesson - 22 - Using Promise to Detect Successfull HTTP Request in Laravel and Vue
 
 	this video is about using promise . Promise is a feature that will run the next function after we fullfill the previous requirement.
 
@@ -608,9 +608,118 @@ Lesson - 21 - Using Promise to Detect Successfull HTTP Request in Laravel and Vu
 		});
 
 
+Lesson - 23 - Delete User with Ajax Request and SweetAlert Modal in Laravel and Vuejs
+
+
+	for this one we will delete a user and when we are deleting we will show a alert that if i want to delete the user or not if yes then it will delelet the user . after deleting the user we will update the table by calling "loadUser" method
+
+		- first setting up the delete button 
+
+			<a href="" @click.prevent="deleteUser(user.id)"> <i class="fa fa-trash red"></i></a>
+
+		- after clickig the trash icon it will call the "deleteUser(user.id)"
+
+			methods:{
+
+				deleteUser:function(user_id){
 
 
 
+				}
+
+			}
+
+		-now we will use the sweetalert 2 for showing aler that i want to delete or not
+
+			deleteUser:function(user_id){
+
+
+			swal.fire({
+
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+
+                }).then((result) => {
+
+                    if (result.value){
+
+                    this.form.delete("api/user/"+user_id).then(() =>{
+
+
+
+                        swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        );
+                        Fire.$emit('afterCreate');
+
+
+                    }).catch(()=> {
+
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong!',
+                            footer: '<a href>Why do I have this issue?</a>'
+                        })
+
+                    });
+
+                    }
+
+
+                })
+			}
+
+
+
+Lesson - 24 - Using One Modal Window for Creating and Updating Data in Laravel and Vuejs
+
+
+
+	In this one we will use VForm again to reset and fill the user data . Fill uses like Model binding
+
+	-first making a method for  add new user . becouse we will not show the modal directly
+
+		<button class="btn btn-success" @click="newModal">Add New <i class="fas fa-user-plus"></i></button>
+
+		-then making the method and reset the form value and show the modal
+
+			- methods:{
+
+				newModal:function(){
+
+
+					this.form.reset();
+
+					$('#addNew').modal('show');
+
+				}
+			}
+
+		-we will use the same modal for creating and updating also . so for that we have to fill it with the existing data .
+
+			- first making the button to click and open the modal .this time we need a method calling with a parameter
+
+				<a href="" @click.prevent="editModal(user)" ><i class="fa fa-edit blue"></i></a>
+
+			-making the method ,showing the modal and fill the data with that user we want to edit.
+
+				methods:{
+
+					editModal:function(user){
+
+						this.form.fill(user);
+					}
+
+					$('#addNew').modal('show');
+				}
 
 
 

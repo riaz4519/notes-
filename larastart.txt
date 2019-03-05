@@ -722,6 +722,73 @@ Lesson - 24 - Using One Modal Window for Creating and Updating Data in Laravel a
 				}
 
 
+Lesson - 25 - Conditionally Switch Between Edit Mode and Create Mode of Modal Window
+
+	Now that we are using a single modal to create and update we need some conditional option to change few title and button text and after submit "methods".For that we will use conditionals
+
+
+		- first for the submit 
+
+			we will first create "editMode variable"
+
+				editMode:true/false
+
+			<form @subnit.prevent="editMode ? updateUser() : addNew()">
+
+		--following through the button and the title will work as same as submit
+
+
+Lesson - 26 - Correctly Update User Information with Unique Email in Database with Laravel and Vue
+
+	in this one we will do actual update . First will call the updatUser method . Then there will a validation on laravel side then we will update the data.
+
+
+		-calling the updateUser on Update
+
+			methods:{
+
+				updateUser:function(){
+
+					this.$Progress.start
+
+					this.form.put('api/user/'+this.form.id).then(() => {
+
+						       //success
+                        swal.fire(
+                            'Updated!',
+                            'Your Info Updated.',
+                            'success'
+                        );
+
+                        $('#addNew').modal('hide');
+                        Fire.$emit('afterCreate');
+                        this.$Progress.finish();
+
+					}).catch(() => {
+
+
+					this.$Progress.fail();
+
+
+					});
+
+				}
+			}
+
+			--laravel validation two new things 
+				-passaword sometimes
+					-'password' => 'sometimes|string:min:6'
+
+				-email 
+					-'email' => 'required|string|email|max:191|unique:users,email,'.$user->id,
+
+
+Lesson - 27 - Security Issues While Developing API in Laravel and Vuejs
+
+
+
+
+
 
 
 

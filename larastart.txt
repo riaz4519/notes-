@@ -785,6 +785,7 @@ Lesson - 26 - Correctly Update User Information with Unique Email in Database wi
 
 Lesson - 27 - Security Issues While Developing API in Laravel and Vuejs
 
+	Have learn the need of api in vue and laravel security . We know that vue.js is a javascript api and it uses api token for authentication where as laravel with php uses session . Now to generate this api token to authenticate our user . we need to learn a bit of Passport so that we can generate api token for authentication and not to expoit our application to other unauthenticated user .
 
 
 

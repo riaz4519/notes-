@@ -788,6 +788,19 @@ Lesson - 27 - Security Issues While Developing API in Laravel and Vuejs
 	Have learn the need of api in vue and laravel security . We know that vue.js is a javascript api and it uses api token for authentication where as laravel with php uses session . Now to generate this api token to authenticate our user . we need to learn a bit of Passport so that we can generate api token for authentication and not to expoit our application to other unauthenticated user .
 
 
+Lesson - 28 - Installing Laravel Passport for API Auth in Laravel 5.7
+
+	Personal access client created successfully.
+	Client ID: 1
+	Client secret: T2Kn9Ngp2awQhqYaPlN5mS7PPSzemXzqDB7m0X8o
+	Password grant client created successfully.
+	Client ID: 2
+	Client secret: Z54G0RblTUtkFLJBVELZTwqRZ7cRgInBtZHEkcZ1
+
+
+
+
+
 
 
 

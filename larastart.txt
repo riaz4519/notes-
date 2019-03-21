@@ -35,17 +35,26 @@ Lesson - 2 - Configure
 	-php artisan make:auth 
 
 	-make a master blade 
-	-copy the admin lte 3 template code 
-	- src='/js/app.js'
 
-	- 'css/app.css'
+	-copy the admin lte 3 starter template code paste it on master
 
-	- go to resource file -> js ->bootstrap.js require('admin-lte');
+	- delete all the js file and add 
 
-	- go to resource and -> css - > app.scss  @import "~admin-lte/dist/css/adminlte.css";
+		<script src='/js/app.js'></script>
 
+	- delete all the css file and add
 
-	-npm run watch - compile run and return if any is there
+		<link rel="stylesheet" href="css/app.css">
+
+	- go to resource file -> js ->bootstrap.js 
+
+		require('admin-lte');
+
+	- go to resource and -> css - > app.scss
+
+	  @import "~admin-lte/dist/css/adminlte.css";
+
+	-npm run watch - compile run and return if any error is there
 
 Lesson - Configure Fontawesome 5
 
@@ -57,7 +66,9 @@ Lesson - Configure Fontawesome 5
 
 		font awesome page - we will use the npm version 
 
-			install - > npm install --save-dev @fortawesome/fontawesome-free
+			install - >
+
+			 npm install --save-dev @fortawesome/fontawesome-free
 
 
 			-in the resource  app.scss
@@ -70,16 +81,17 @@ Lesson - Configure Fontawesome 5
 
 
 
-Lesson - 4 - Github configaration
-
-
-
+Lesson - 4 - Github configaration 
 
 
 Lesson - 5 - just little bit master blade configaration 
 
 	-chaning the icon 
 	-adding new tab
+
+	-show user name 
+
+		Auth:user()->name;
 
 Lesson - 6 - vue router adding to laravel 
 

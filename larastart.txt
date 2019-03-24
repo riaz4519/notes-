@@ -162,7 +162,7 @@ Lesson - 7 - Active menu in vue router
 	})
 
 
-	at the last line of the route add 
+	at the last line of the route add  
 
 				Route::get('{path}',"HomeController@index")->where( 'path', '([A-z\d-\/_.]+)?' );
 

@@ -1,0 +1,36 @@
+
+Lesson - 1 - Bangla Object Oriented PHP Part-01 (Class, Method and Object)
+
+	class Person{
+
+		//properties
+
+		//access modifiers
+
+		public $name;
+
+		public $age;
+
+		//method 
+
+		public function personName(){
+
+
+		}
+
+
+		public function personAge(){
+
+
+		}
+
+	}
+
+	$personOne = new Person;
+	
+
+
+
+	- if i do no declear any type it will be autometically be public
+
+	**makign object

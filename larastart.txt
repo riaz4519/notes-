@@ -56,7 +56,7 @@ Lesson - 2 - Configure
 
 	-npm run watch - compile run and return if any error is there
 
-Lesson - Configure Fontawesome 5
+Lesson - 3 - Configure Fontawesome 5
 
 	- flat icon 
 	- download rocket and profile with microphone 
@@ -797,17 +797,81 @@ Lesson - 26 - Correctly Update User Information with Unique Email in Database wi
 
 Lesson - 27 - Security Issues While Developing API in Laravel and Vuejs
 
-	Have learn the need of api in vue and laravel security . We know that vue.js is a javascript api and it uses api token for authentication where as laravel with php uses session . Now to generate this api token to authenticate our user . we need to learn a bit of Passport so that we can generate api token for authentication and not to expoit our application to other unauthenticated user .
+	Have learn the need of api in vue and laravel security . We know that vue.js is a javascript api and it uses api token for authentication where as laravel with php uses session . Now to generate this api token to authenticate our user . we need to learn a bit  of Passport so that we can generate api token for authentication and not to expoit our application to other unauthenticated user .
 
 
 Lesson - 28 - Installing Laravel Passport for API Auth in Laravel 5.7
 
-	Personal access client created successfully.
-	Client ID: 1
-	Client secret: T2Kn9Ngp2awQhqYaPlN5mS7PPSzemXzqDB7m0X8o
-	Password grant client created successfully.
-	Client ID: 2
-	Client secret: Z54G0RblTUtkFLJBVELZTwqRZ7cRgInBtZHEkcZ1
+
+	**installing 
+
+		composer require laravel/passport
+
+	** migrating 
+	//*
+	php artisan vendor:publish --tag=passport-migrations
+	/*/
+
+		php artisan migrate
+
+	**passport install 
+
+		php artisan passport:install
+
+		**after  install save the api key
+
+			Personal access client created successfully.
+			Client ID: 1
+			Client secret: T2Kn9Ngp2awQhqYaPlN5mS7PPSzemXzqDB7m0X8o
+			Password grant client created successfully.
+			Client ID: 2
+			Client secret: Z54G0RblTUtkFLJBVELZTwqRZ7cRgInBtZHEkcZ1
+
+	**After that adding has token to USER model
+
+		use HasApiTokens,
+
+	**Adding passport routes to AuthServiceProvider
+
+		public function boot()
+	    {
+	        $this->registerPolicies();
+
+	        Passport::routes();
+	    }
+
+	 ** Adding api to cofing/auth/php . Change api token to passport
+
+		    'api' => [
+		        'driver' => 'passport',
+		        'provider' => 'users',
+		    ],
+
+
+Lesson - 28 - All we need is JWT for Laravel API Authentication
+
+	in this lesson we learn how to implement the api token after set up 
+
+		**
+		 Consuming Your API With JavaScript
+
+		 by going to http->kernel
+
+		 'web' => [
+			    // Other middleware...
+			    \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+			],
+
+
+		**step to go to the user controller and 
+
+			public function __contructor(){
+
+			$this->middleware('auth:api');
+			}
+
+
+
 
 
 

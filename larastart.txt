@@ -870,6 +870,14 @@ Lesson - 28 - All we need is JWT for Laravel API Authentication
 			$this->middleware('auth:api');
 			}
 
+Lesson - 29 - Let's Make User Profile Component for User In Laravel and Vuejs
+
+
+	In This one we just set up the profile and set the activity and setting for the profile
+
+
+Lesson - 30
+
 
 
 
